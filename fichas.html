@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Draggable Game Piece</title>
+		<style>
+			/* styles.css */
+			#gamePiece {
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				position: absolute;
+				cursor: pointer;
+				border-radius: 50%; /* Makes the game piece circular */
+			}
+		</style>
+	</head>
+	<body>
+		<a href="tablero.html">tablero</a>
+		<div id="gamePiece"></div>
+		<script>
+			// script.js
+			document.addEventListener('DOMContentLoaded', function () {
+				const gamePiece = document.getElementById('gamePiece');
+				let active = false;
+				let currentX;
+				let currentY;
+				let initialX;
+				let initialY;
+				let xOffset = 0;
+				let yOffset = 0;
+
+				function dragStart(e) {
+					initialX = e.clientX - xOffset;
+					initialY = e.clientY - yOffset;
+					if (e.target === gamePiece) {
+						active = true;
+					}
+				}
+
+				function dragEnd() {
+					initialX = currentX;
+					initialY = currentY;
+					active = false;
+				}
+
+				function drag(e) {
+					if (active) {
+						e.preventDefault();
+						currentX = e.clientX - initialX;
+						currentY = e.clientY - initialY;
+						xOffset = currentX;
+						yOffset = currentY;
+						setTranslate(currentX, currentY, gamePiece);
+					}
+				}
+
+				function setTranslate(xPos, yPos, el) {
+					el.style.transform = 'translate3d(' + xPos + 'px, ' + yPos + 'px, 0)';
+				}
+
+				gamePiece.addEventListener('mousedown', dragStart, false);
+				document.addEventListener('mouseup', dragEnd, false);
+				document.addEventListener('mousemove', drag, false);
+			});
+		</script>
+	</body>
+</html>
+
+<!-- 
+
+
+<a href="tablero.html">tablero</a>
+<div id="board">
+	<img
+		src="/img/2.webp"
+		id="piece1"
+		class="piece"
+		style="top: 10px; left: 10px"
+	/>
+	
+</div> -->
