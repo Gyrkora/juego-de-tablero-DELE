@@ -3,7 +3,7 @@
 } */
 
 .tablero-container {
-	margin-top: 30px;
+	/* margin-top: 30px; */
 }
 
 .tablero {
@@ -12,8 +12,8 @@
 	justify-content: center;
 	text-align: center;
 	margin: 0 auto;
-	/* width: 750px; */
-	/* height: 750px; */
+	width: 60%;
+	height: 60%;
 }
 
 a {
