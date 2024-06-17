@@ -6,7 +6,7 @@ import imgTabler from '../assets/tablero.png';
 
 function Tablero_ciudad() {
 	const refBoard = useRef(null);
-	const [pieces, setPieces] = useState([{ id: 'piece1', left: 50, top: 50 }]);
+	const [pieces, setPieces] = useState([{ id: '', left: 50, top: 50 }]);
 
 	const [, dropRef] = useDrop(
 		() => ({
@@ -46,7 +46,7 @@ function Tablero_ciudad() {
 			/>
 			{pieces.map((piece) => (
 				<Fichas key={piece.id} id={piece.id} left={piece.left} top={piece.top}>
-					Piece {piece.id}
+					{piece.id}
 				</Fichas>
 			))}
 		</div>
