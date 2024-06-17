@@ -15,25 +15,25 @@
 .board {
 	width: 100%; /* Adjust width to the viewport */
 	max-height: 100vh; /* Maximum height based on the viewport height */
-	position: relative; /* Necessary for absolute positioning of the pieces */
-	overflow: hidden; /* Hide anything that goes out of bounds */
-	display: flex; /* Using flex to center the image */
-	justify-content: center; /* Center horizontally */
-	align-items: center; /* Center vertically */
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .board-img {
-	max-width: 100%; /* Limit width to prevent overflow */
-	max-height: 100vh; /* Limit height to the viewport */
-	object-fit: contain; /* Ensures the image is fully visible */
+	max-width: 100%;
+	max-height: 100vh;
+	object-fit: contain;
 }
 
 .piece {
 	cursor: move;
-	position: absolute; /* Allows piece to be positioned based on drag */
+	position: absolute;
 	width: 30px;
 	height: 30px;
 	background-color: red;
-	border-radius: 50%; /* Makes the game piece circular */
+	border-radius: 50%;
 	border: 2px solid black;
 }
