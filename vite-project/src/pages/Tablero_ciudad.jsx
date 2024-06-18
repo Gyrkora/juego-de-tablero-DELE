@@ -3,7 +3,7 @@ import { useDrop } from 'react-dnd';
 import '../gamestyles.css';
 import Fichas from '../components/Fichas';
 import imgTabler from '../assets/tablero.png';
-import { getRandomColor } from '../api/helpers';
+import { getRandomColor } from '../functions/helpers';
 import { ButtonAdd } from '../styles.css/Buttonadd.styles';
 
 function Tablero_ciudad() {

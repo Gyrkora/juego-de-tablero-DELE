@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { InputContainer, InputMainContainer } from '../styles.css/Input.styles';
-import { ButtonAdd, ButtonAddBlockInput } from '../styles.css/Buttonadd.styles';
+import { ButtonAddBlockInput } from '../styles.css/Buttonadd.styles';
 
 function InputScore() {
 	// Initialize state to manage multiple players
 	const [players, setPlayers] = useState([
-		{ id: 1, name: '', money: '', article: '' }, // Initial player template
+		{ id: 1, name: '', money: 'Billetera:', article: '' }, // Initial player template
 	]);
 
 	// Function to handle changes in any player input
@@ -24,7 +24,7 @@ function InputScore() {
 		const newPlayer = {
 			id: players.length + 1,
 			name: '',
-			money: '',
+			money: 'Billetera:',
 			article: '',
 		};
 		setPlayers([...players, newPlayer]);
@@ -37,6 +37,7 @@ function InputScore() {
 					<InputContainer
 						placeholder="Nombre"
 						value={player.name}
+						style={{ color: '#bd1212' }}
 						onChange={handlePlayerChange(index, 'name')}
 					/>
 					<InputContainer
@@ -45,7 +46,7 @@ function InputScore() {
 						onChange={handlePlayerChange(index, 'money')}
 					/>
 					<InputContainer
-						placeholder="Articulo"
+						placeholder="Artículo"
 						value={player.article}
 						onChange={handlePlayerChange(index, 'article')}
 					/>

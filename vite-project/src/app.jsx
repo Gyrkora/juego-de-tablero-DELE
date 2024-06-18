@@ -5,6 +5,7 @@ import { TouchBackend } from 'react-dnd-touch-backend';
 
 import { DndProvider } from 'react-dnd';
 import LeftContainer from './components/LeftContainer';
+import RightContainer from './components/RightContainer';
 
 function isTouchDevice() {
 	return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -17,6 +18,7 @@ export function App() {
 		<div>
 			<DndProvider backend={backend} options={{ enableMouseEvents: true }}>
 				<LeftContainer />
+				<RightContainer />
 				<Tablero_ciudad />
 			</DndProvider>
 		</div>

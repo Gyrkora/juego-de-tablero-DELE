@@ -19,6 +19,7 @@ export const InputContainer = styled.input`
 	background-color: white;
 	margin: 5px;
 	width: 250px;
+	font-family: 'Montserrat', sans-serif;
 
 	&:focus {
 		border-color: #bd1212;
