@@ -1,6 +1,10 @@
 import React from 'react';
-import { LeftContainerStyles } from '../styles.css/General.styles';
+import {
+	LeftContainerStyles,
+	LogoImageContainer,
+} from '../styles.css/General.styles';
 import InputScore from './InputScore';
+import logotow from '../assets/logotow.png';
 
 function LeftContainer() {
 	return (
