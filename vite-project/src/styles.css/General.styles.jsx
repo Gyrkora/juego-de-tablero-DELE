@@ -26,21 +26,21 @@ export const LogoImageContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	top: 150px;
-	right: -22px;
+	top: 250px;
+	right: -20px;
 
 	h2 {
 		text-align: center;
 		color: #fe0362;
-		font-family: 'barrio';
-		font-size: 30px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 24px;
 	}
 
 	position: absolute;
 
 	img {
-		width: 120px;
-		height: 80px;
+		width: 96px;
+		height: 63.67px;
 	}
 `;
 
