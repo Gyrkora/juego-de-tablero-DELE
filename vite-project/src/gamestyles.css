@@ -1,17 +1,3 @@
-/* .board {
-	width: 100%;
-	height: 500px;
-	position: relative;
-	overflow: hidden;
-}
-
-.board-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; 
-
-} */
-
 .board {
 	width: 100%; /* Adjust width to the viewport */
 	max-height: 100vh; /* Maximum height based on the viewport height */

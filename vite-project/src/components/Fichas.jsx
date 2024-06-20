@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import '../gamestyles.css';
+import { Piece } from '../styles.css/Tablero.styles';
 
 function Fichas({ id, left, top, backgroundColor, children }) {
 	const [{ isDragging }, dragRef, preview] = useDrag(
@@ -21,7 +22,7 @@ function Fichas({ id, left, top, backgroundColor, children }) {
 			</div>
 		),
 		(
-			<div
+			<Piece
 				ref={dragRef}
 				className="piece"
 				style={{
@@ -33,7 +34,7 @@ function Fichas({ id, left, top, backgroundColor, children }) {
 				}}
 			>
 				{children}
-			</div>
+			</Piece>
 		)
 	);
 }
